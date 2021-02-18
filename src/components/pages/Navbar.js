@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-
-// public\images\gic-site-logo.png
+import logo from '../gic-site-logo.png'
 
 function Navbar() {
 
@@ -22,7 +21,7 @@ function Navbar() {
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to='/' className="navbar-logo">GIC SIMPLE </Link>
+                    <Link to='/' className="navbar-logo"><img src={logo} alt="logo"/></Link>
 
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
