@@ -1,0 +1,25 @@
+:root {
+  --primary: #248e38;
+}
+
+.slider {
+  position: relative;
+}
+
+.arrows {
+  top: 80px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.left-arrow {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.right-arrow {
+  padding: 1rem;
+  cursor: pointer;
+}
