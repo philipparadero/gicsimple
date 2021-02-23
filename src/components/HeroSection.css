@@ -17,7 +17,7 @@
 .col {
   width: 50%;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0;
 }
 
 .home__headline {
@@ -57,12 +57,12 @@
   }
 
   .home__headline {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     padding: 1rem 0;
   }
 
   .home__paragraph {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 1rem 0;
   }
 }
