@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from '../gic-site-logo.png'
+import logo from './gic-site-logo.png'
+import { Button } from '../Buttons/Button';
+
+
+
 
 function Navbar() {
 
     const [click, setClick] = useState(false);
-    // const [button, setButton] = useState(true);
+    const [button, setButton] = useState(true);
 
-
+    
     const closeMobileMenu = () => {
         setClick(false);
     }
@@ -16,7 +20,21 @@ function Navbar() {
     const handleClick = () => {
         setClick(!click)
     }
+
+    const showButton = () => {
+        if (window.innerWidth <= 1160) {
+          setButton(false);
+        } else {
+          setButton(true);
+        }
+      };
+      
+      useEffect(() => {
+        showButton();
+      }, []);
     
+    window.addEventListener('resize', showButton);
+
     return (
         <>
             <nav className="navbar">
@@ -49,11 +67,12 @@ function Navbar() {
                         <li className="nav-item">
                             <Link to='/faq' className="nav-links" onClick={closeMobileMenu}>FAQ</Link> 
                         </li>
-                        {/* <li className="nav-item">
+                        <li className="nav-item">
                             <Link to='/login' className='nav-links-mobile' onClick={closeMobileMenu}>Login</Link> 
-                        </li> */}
+                        </li>
                         
                     </ul>
+                    <Link to='/login'> {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} </Link> 
                 </div>
             </nav>
         </>
