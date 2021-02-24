@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react'
-import HeroSection from './HeroSection';
+
 import { DataNew } from './pages/Homepage/DataNew';
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import HeroSection from './pages/Homepage/HeroSection'
 import './Slider.css';
+
 
 
 const Slider = () => {

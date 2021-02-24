@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';    
+import { Button } from '../Buttons/Button';
 import './HeroSection.css'
-import { Button } from './pages/Buttons/Button';
+
 
 function HeroSection({headline, paragraph, img, alt, buttonLabel}) {
     return (
@@ -12,11 +13,11 @@ function HeroSection({headline, paragraph, img, alt, buttonLabel}) {
                         <h1 className="home__headline">{headline}</h1>
                         <p className="home__paragraph">{paragraph}</p>
                         <Link  className='home__button'to='/login'>  
-                            <Button buttonStyle='btn--outline' buttonSize='btn--large'>{buttonLabel}</Button> 
+                            <Button buttonSize='btn--large'>{buttonLabel}</Button> 
                         </Link> 
                     </div>
                     <div className="col home__image">
-                        <img src={img} alt={alt}/>
+                        <img className='slider__image'src={img} alt={alt}/>
                     </div>
                 </div>
             </div>
