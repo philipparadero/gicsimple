@@ -65,4 +65,9 @@
     font-size: 1.1rem;
     padding: 1rem 0;
   }
+
+  .slider__image {
+    width: 80%;
+    object-fit: cover;
+  }
 }

@@ -1,15 +1,19 @@
 import React from 'react'
-import '../../HeroSection'
 import RatesSection from '../../RatesSection';
 import Slider from '../../Slider';
-import {RateData} from '../../RateData'
+import Offers from './Offers';
+import SpecialPromo from './SpecialPromo';
+// import '../../HeroSection'
+
 
 function Home() {
-    console.log("data", RateData);
+    
     return (
         <>
             <Slider />
             <RatesSection />
+            <SpecialPromo />
+            <Offers />
         </>
     )
 }

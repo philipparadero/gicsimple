@@ -1,0 +1,22 @@
+.headers__container {
+  color: #248e38;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.headers__container:before {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 4px;
+  background: #248e38;
+  left: 0;
+  top: 0;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.headers__container.centered__line:before {
+  left: calc(50% - 170px / 2);
+}
